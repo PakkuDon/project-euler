@@ -6,9 +6,11 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "jest": "^25.2.3"
+    "jest": "^25.2.3",
+    "prettier": "^2.0.2"
   },
   "scripts": {
+    "format": "prettier --write src",
     "test": "jest"
   }
 }
