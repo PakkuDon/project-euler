@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "git@github.com:PakkuDon/project-euler.git",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "jest": "^25.2.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }
