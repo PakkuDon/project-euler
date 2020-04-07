@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Problem scaffolder when given a problem name generates solution placeholder 1`] = `"module.exports = (number) => {}"`;
+
+exports[`Problem scaffolder when given a problem name generates test placeholder 1`] = `
+"const solution = require(\\"./index\\");
+
+describe(\\"Problem 000: Test problem\\", () => {
+  test(\\"returns a number\\", () => {
+    expect(solution(2)).toEqual(expect.any(Number));
+  });
+});
+  "
+`;
