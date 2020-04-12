@@ -38,6 +38,10 @@ describe("${input}", () => {
   test("returns a number", () => {
     expect(solution(2)).toEqual(expect.any(Number));
   });
+
+  test("2 returns 4", () => {
+    expect(solution(2)).toEqual(4);
+  });
 });
   `
   );
