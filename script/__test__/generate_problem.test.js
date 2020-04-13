@@ -88,4 +88,19 @@ describe("Problem scaffolder", () => {
       });
     });
   });
+
+  describe("when folder already exists", () => {
+    it("returns non-zero exit code", (done) => {
+      fs.mkdirSync("src/problem-000-test-problem");
+      child_process.execFile(
+        "script/generate_problem.js",
+        ["Problem 000: Test problem"],
+        (error, output) => {
+          expect(error).toBeTruthy();
+
+          done();
+        }
+      );
+    });
+  });
 });

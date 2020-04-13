@@ -11,7 +11,7 @@ if (process.argv.length !== 3) {
 }
 
 const input = process.argv[2];
-const [_inputString, problemNumber, problemName] = input.match(
+const [inputString, problemNumber, problemName] = input.match(
   /Problem (\d+): ([\w\s]+)/
 );
 
@@ -20,6 +20,12 @@ const directoryName = `src/problem-${problemNumber.padStart(
   "0"
 )}-${problemName.toLocaleLowerCase().replace(/\s/g, "-")}`;
 
+if (fs.existsSync(directoryName)) {
+  console.log(
+    `Failed to generate directory for ${inputString}. ${directoryName} already exists.`
+  );
+  process.exit(1);
+}
 fs.mkdir(directoryName, { recursive: true }, (error) => {
   if (error) {
     throw error;
