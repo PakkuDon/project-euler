@@ -72,15 +72,19 @@ describe("Problem scaffolder", () => {
   });
 
   describe("when given incorrect number of arguments", () => {
-    it("returns non-zero exit code", () => {
+    it("returns non-zero exit code", (done) => {
       child_process.execFile("script/generate_problem.js", (error) => {
         expect(error).toBeTruthy();
+
+        done();
       });
     });
 
-    it("prints usage string", () => {
+    it("prints usage string", (done) => {
       child_process.execFile("script/generate_problem.js", (error, stdout) => {
         expect(stdout).toContain("Usage");
+
+        done();
       });
     });
   });
