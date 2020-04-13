@@ -6,17 +6,16 @@ Solutions to Project Euler puzzles. Written in JavaScript and with tests written
 1. Clone this repository and `cd` into it
 2. Run `yarn install` to fetch developer dependencies (ie: Jest)
 3. Run `yarn test [filepath]` to run tests
-4. Create a new directory for each exercise. Directory structure is as follows:
+4. When starting a new exercise create a directory for it by running the following command:
 ```sh
-src/
-└── problem-[exericise number with preceding zeroes]-[snake cased exercise name]
-    ├── index.js
-    └── index.test.js
+./script/generate_problem.js "<problem name>"
+```
+```sh
 # Example
-src/
-└── problem-001-multiples-of-3-and-5
-    ├── index.js
-    └── index.test.js
+$ ./script/generate_problem.js "Problem 3: Largest prime factor"
+Created src/problem-003-largest-prime-factor
+├─ Created src/problem-003-largest-prime-factor/index.js
+└─ Created src/problem-003-largest-prime-factor/index.test.js
 ```
 
 ## Trivia
